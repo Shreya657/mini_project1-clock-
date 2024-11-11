@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock">
+             <span id="i1">00</span>
+            <span >:</span>
+            <span id="i2">00</span>
+            <span>:</span>
+            <span id="i3">00</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let hrs=document.getElementById("i1");
+        let mns=document.getElementById("i2");
+        let sec=document.getElementById("i3");
+        setInterval(()=>{
+            let currentTime=new Date();
+        console.log(currentTime);
+    
+          let hours=currentTime.getHours();
+          let minutes=currentTime.getMinutes();
+          let second=currentTime.getSeconds();
+          if(hours>12){
+            hours-=12;
+          }
+          if(hours===0){
+            hours=12;
+          }
+          let period=hours>12?"PM":"AM";
+     
+        hrs.innerHTML=(hours<10?"0":"")+hours+"<div class='period'>"+period+"</div>";
+        mns.innerHTML=(minutes<10?"0":"")+minutes;
+        sec.innerHTML=(second<10?"0":"")+second;
+   
+
+        },1000);
+
+
+    
+
+
+    </script>
+</body>
+</html>
