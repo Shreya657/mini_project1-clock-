@@ -78,9 +78,9 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     content: 'SECONDS';
 }
 .period {
-    font-size: 0.3em;  /* Adjust the size to make AM/PM smaller */
-    vertical-align: super;  /* Position the AM/PM slightly above */
-    margin-left: 2px;  /* Add a little space between the time and AM/PM */
+    font-size: 0.3em;  
+    vertical-align: super;  
+    margin-left: 2px;  
     position: absolute;
     left: 90%;
     bottom: 30%;
